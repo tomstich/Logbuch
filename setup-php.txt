@@ -1,0 +1,35 @@
+Auf der Suche um herauszufinden, was denn phpbrew ist, bin ich auf diese Seite gestossen: http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew/
+
+phpbrew dient dazu, in der Entwicklung, verschiedene PHP Versionen benutzen zu können, ohne eine Virtual Machine zu benutzen.
+Mit phpbrew kann man also einfach zwischen verschiedenen PHP Versionen hin und her switchen.
+
+Für phpbrew werden vorab noch ein paar Utilities gebraucht. Diese habe ich mit dem folgenden Befehl installiert.
+brew install automake autoconf curl pcre re2c mhash libtool icu4c gettext jpeg libxml2 mcrypt gmp libevent
+
+curl -L -O https://github.com/phpbrew/phpbrew/raw/master/phpbrew
+Mit dem Befehl wir phpbrew gedownloaded.
+
+chmod +x phpbrew
+Dieser Befel Steht für change file modes. Also sozusagen um die Rechte einer Datei zu bearbeiten.
+
+sudo mv phpbrew /usr/bin/phpbrew
+Dieser Befehl stand bei der Anleitung, doch aufgrund fehlender Rechte, hat dieser nicht funktioniert.
+
+Dann haben wir den Pfad der Datei geändert in /usr/local/bin/phpbrew und damit hat es funktioniert.
+
+phpbrew init
+Mit diesem befehl wurde die Installation von phpbrew abgeschlossen.
+
+phpbrew known
+Dieser Befehl listet alle verfügbaren PHP Versionen auf.
+
+Da Hauke wollte, dass wir PHP 7 installieren, habe ich dann den Befehl phpbrew install 7.0.9 eingegeben.
+Dann hatte ich allerdings diesen Fehler: configure: error: Cannot find OpenSSL's <evp.h>
+Um den Fehler zu beheben, habe ich das Verzeichnis "include" geöffnet und dann folgenden Befehl eingegeben: ln -s ../opt/openssl/include/openssl .
+Durch diesen Befehl wurde die Datei "openssl" in den Ordner include verlinkt.
+Dadurch wurde der Fehler behoben.
+
+Bei dem Versuch PHP nun zu installieren, ist ein Fehler aufgetreten, dass "readline" fehlt.
+Readline wurde dann mit "brew install readline" installiert.
+
+Nach der Installation von "readline" hat auch die Installation von PHP funktioniert.

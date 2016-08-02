@@ -1,0 +1,17 @@
+Zuerst habe ich nach Homebrew gegooglet und bin auf diese Seite gestoßen: http://brew.sh/index_de.html
+
+Bei Wikipedia habe ich ein paar Mehr Informationen über Homebrew gefunden: https://de.wikipedia.org/wiki/Homebrew_(Paketverwaltung)
+Homebrew ist eine freie Paketverwaltung, die für die Installation von Software auf dem Mac OS X vereinfacht.
+Mit Homebrew kann man Pakete installieren, die bei Mac OS X fehlen.
+Homebrew ist in Ruby geschrieben und benutzt die bereits vorinstallierte Version von Ruby auf dem Mac.
+Mit Homebrew kann man auch eigene Pakete installieren.
+
+Dann habe ich eine Anleitung zur Installation von Homebrew gefunden: http://brew.sh/index_de.html
+
+Der erste Befehl ist: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+Ordner und Dateien wurden nach der Bestätigung erstellt.
+
+
+Zum Test habe ich folgenden Befehl eingegeben: brew install wget
+Durch diesen Befehl wurde wget installiert. Das ist ein Kommandozeilenprogramm zum Herunterladen von Dateien
+aus dem Internet. Die Installation hat funktioniert und somit habe ich die Installation abgeschlossen.
